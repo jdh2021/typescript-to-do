@@ -1,0 +1,23 @@
+{
+  "name": "typescript-to-do",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdh2021/typescript-to-do.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdh2021/typescript-to-do/issues"
+  },
+  "homepage": "https://github.com/jdh2021/typescript-to-do#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
