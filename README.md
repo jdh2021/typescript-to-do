@@ -1,6 +1,8 @@
-# New Project
+# TypeScript To-Do List
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
+
+I'm building a TypeScript to-do list based on this Web Dev Simplified [tutorial](https://www.youtube.com/watch?v=jBmrduvKl5w&t=67s).  
 
 ## Available Scripts
 
@@ -19,6 +21,3 @@ Your app is ready to be deployed!
 
 **For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.mjs` config file.
 
-### Q: What about Eject?
-
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
