@@ -1,5 +1,12 @@
 import { v4 as uuidV4 } from 'uuid'
 
+type Task = {
+    id: string
+    title: string
+    completed: boolean
+    createdAt: Date
+}
+
 // console.log(uuidV4())
 
 const list = document.querySelector<HTMLUListElement>("#list")
@@ -10,12 +17,12 @@ const input = document.querySelector<HTMLInputElement>("#new-task-title")
 form?.addEventListener("submit", e => {
     e.preventDefault()
     //optional chaining by adding ?
-    if(input?.value == "" || input?.value == null ) return
-    // to-do object
+    if (input?.value == "" || input?.value == null) return
+    // to-do object 
     const newTask = {
         id: uuidV4(),
         title: input.value,
-        completed: false, 
+        completed: false,
         createdAt: new Date()
     }
     addListItem(newTask)
@@ -23,9 +30,4 @@ form?.addEventListener("submit", e => {
 
 
 // implicit any can be set to true or false, type of task should be specified
-function addListItem(task: 
-    {   id: string
-        title: string 
-        completed: boolean
-        createdAt: Date 
-    }) {}
+function addListItem(task: Task) {}
