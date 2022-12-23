@@ -19,7 +19,7 @@ form?.addEventListener("submit", e => {
     //optional chaining by adding ?
     if (input?.value == "" || input?.value == null) return
     // to-do object 
-    const newTask = {
+    const newTask: Task = {
         id: uuidV4(),
         title: input.value,
         completed: false,
@@ -30,4 +30,13 @@ form?.addEventListener("submit", e => {
 
 
 // implicit any can be set to true or false, type of task should be specified
-function addListItem(task: Task) {}
+function addListItem(task: Task) {
+    const item = document.createElement("li")
+    const label = document.createElement("label")
+    const checkbox = document.createElement("input")
+    checkbox.type="checkbox"
+    label.append(checkbox, task.title)
+    item.append(label)
+    // ? syntax automatically applied if list is null
+    list?.append(item)
+}
