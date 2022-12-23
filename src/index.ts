@@ -6,17 +6,26 @@ const list = document.querySelector<HTMLUListElement>("#list")
 const form = document.getElementById("new-task-form") as HTMLFormElement | null
 const input = document.querySelector<HTMLInputElement>("#new-task-title")
 
-// submit event take in e object
+// submit event takes in e object
 form?.addEventListener("submit", e => {
     e.preventDefault()
     //optional chaining by adding ?
     if(input?.value == "" || input?.value == null ) return
     // to-do object
-    const task = {
+    const newTask = {
         id: uuidV4(),
         title: input.value,
         completed: false, 
         createdAt: new Date()
     }
-    input.value
+    addListItem(newTask)
 })
+
+
+// implicit any can be set to true or false, type of task should be specified
+function addListItem(task: 
+    {   id: string
+        title: string 
+        completed: boolean
+        createdAt: Date 
+    }) {}
