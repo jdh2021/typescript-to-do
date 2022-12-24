@@ -12,6 +12,8 @@ type Task = {
 const list = document.querySelector<HTMLUListElement>("#list")
 const form = document.getElementById("new-task-form") as HTMLFormElement | null
 const input = document.querySelector<HTMLInputElement>("#new-task-title")
+// save information in local storage, default is empty array of tasks
+const tasks: Task[] = []
 
 // submit event takes in e object
 form?.addEventListener("submit", e => {
@@ -25,6 +27,7 @@ form?.addEventListener("submit", e => {
         completed: false,
         createdAt: new Date()
     }
+    tasks.push(newTask)
     addListItem(newTask)
     input.value = ""
 })
@@ -35,6 +38,11 @@ function addListItem(task: Task) {
     const item = document.createElement("li")
     const label = document.createElement("label")
     const checkbox = document.createElement("input")
+    // on change of checkbox, task completed status is updated
+    checkbox.addEventListener("change", () => {
+        task.completed = checkbox.checked
+        console.log(tasks);
+    })
     checkbox.type = "checkbox"
     checkbox.checked= task.completed
     label.append(checkbox, task.title)
