@@ -42,12 +42,19 @@ function addListItem(task: Task) {
     checkbox.addEventListener("change", () => {
         task.completed = checkbox.checked
         console.log(tasks);
+        saveTasks()
     })
     checkbox.type = "checkbox"
     checkbox.checked= task.completed
     label.append(checkbox, task.title)
     item.append(label)
     // ? syntax automatically applied if list is null
-    list?.append(item)
-    
+    list?.append(item)   
 }
+
+// save tasks in local storage
+function saveTasks() {
+    // take local storage, set item "TASKS", stringify tasks
+    localStorage.setItem("TASKS", JSON.stringify(tasks))
+}
+
