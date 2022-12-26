@@ -1,23 +1,6 @@
-# TypeScript To-Do List
+## TypeScript To-Do List
 
 > ✨ Bootstrapped with Create Snowpack App (CSA).
 
-I'm building a TypeScript to-do list based on this Web Dev Simplified [tutorial](https://www.youtube.com/watch?v=jBmrduvKl5w&t=67s).  
-
-## Available Scripts
-
-### npm start
-
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
-
-The page will reload if you make edits.
-You will also see any lint errors in the console.
-
-### npm run build
-
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
-
-**For the best production performance:** Add a build bundler plugin like [@snowpack/plugin-webpack](https://github.com/snowpackjs/snowpack/tree/main/plugins/plugin-webpack) or [snowpack-plugin-rollup-bundle](https://github.com/ParamagicDev/snowpack-plugin-rollup-bundle) to your `snowpack.config.mjs` config file.
+I built a TypeScript to-do list based on this Web Dev Simplified [tutorial](https://www.youtube.com/watch?v=jBmrduvKl5w&t=67s). `npm start` runs the app in the development mode, and open http://localhost:8080 to view it in the browser. Enter a task by typing it in and clicking the `Add` button. Mark a task complete or incomplete by toggling the checkbox. 
 
